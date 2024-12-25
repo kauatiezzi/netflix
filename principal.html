@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Netflix</title>
+    <link rel="shortcut icon" href="img/Logo-site.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens: {
+              sm: "640px",
+              // => @media (min-width: 640px) { ... }
+  
+              md: "768px",
+              // => @media (min-width: 768px) { ... }
+  
+              lg: "1024px",
+              // => @media (min-width: 1024px) { ... }
+  
+              xl: "1280px",
+              // => @media (min-width: 1280px) { ... }
+  
+              "2xl": "1536px",
+              // => @media (min-width: 1536px) { ... }
+            },
+            fontFamily: {
+              sans: ["Poppins", "system-ui"],
+              serif: ["ui-serif", "Georgia"],
+              mono: ["ui-monospace", "SFMono-Regular"],
+            },
+            extend: {
+              colors: {
+                principal: "#495ECA",
+                cinza: "#767B99",
+                sec: "#8F9EE4",
+                terc: "#272D4D",
+                quarta: "#F2F0FE",
+                amarelo: "#FFA45A",
+              },
+            },
+          },
+        }
+      </script>
+  
+</head>
+
+
+
+<body class="text-white font-montserrat overflow-x-hidden">
+
+<!--TOPO DA PAGINA, CABEÇARIO CONTENDO: LOGO/INICIO/SÉRIES/FILMES/(MINHA LISTA - APENAS NO PC) E TODOS OS LINKS REDIRECIONANDO PARA A PÁGINA PRINCIPAL-->
+
+<header class="fixed top-0 w-full bg-black bg-opacity-80 z-10">
+    <ul class="flex items-center h-20 px-6 space-x-8">
+        <li>
+            <img src="img/Nlogo.png" alt="Netflix logo" class="block 2xl:hidden w-6">
+
+            <img src="img/Netflix_logo.png" alt="Netflix logo" class="w-24 sm:block hidden">
+        </li>
+        <li><a href="principal.html" class="hover:text-cinza">Início</a></li>
+        <li><a href="principal.html" class="hover:text-cinza">Séries</a></li>
+        <li><a href="principal.html" class="hover:text-cinza">Filmes</a></li>
+        <li class="hidden md:block"><a href="principal.html" class="hover:text-cinza">Minha lista</a></li>
+    </ul>
+</header>
+
+<!--FILME EM EXIBIÇÃO COM UMA BACKGROUND DO FILME(NO CELULAR É OUTRO BACKGROUND) JUNTO COM UM BOTÃO PARA ASSISTIR E UM PARA (MAIS INFORMAÇÕES - NÃO ESTÁ FUNCIONANDO, FUTURAMENTE ESTARÁ)-->
+
+
+<!-- Background Section -->
+<section class="relative text-white h-screen flex flex-col justify-end lg:justify-end items-center md:items-start px-6 md:mb-4 bg-cover bg-center md:bg-[url('img/destaque2.png')] bg-[url('img/fundo.png')]">
+    <img src="img/Titulo.png" alt="Titulo" class="w-3/4 md:w-1/2">
+    <p class="text-center text-sm md:text-lg mt-4 md:hidden">Durante 2024, duas pessoas da forma mais improvável se conheceram e se apaixonaram, confira o primeiro episódio de "Nós"!</p>
+    <p class="hidden md:block text-left text-base md:text-xl">Durante 2024, duas pessoas da forma mais improvável se conheceram e se apaixonaram, confira o primeiro episódio de "Nós"!</p>
+    <div class="flex flex-col md:flex-row items-center md:items-start mt-6 space-y-4 md:space-y-0 md:space-x-3 mb-12">
+        <a href="filme1.html" class="flex items-center px-6 py-3 bg-white text-black rounded hover:opacity-80">
+            <img src="img/Play.png" alt="Play" class="w-5 mr-2">Assistir
+        </a>
+        <button class="flex items-center px-6 py-3 bg-gray-600 text-white rounded hover:opacity-80">
+            <img src="img/info.png" alt="Info" class="w-5 mr-2">Mais Informações
+        </button>
+    </div>
+</section>
+
+
+
+
+<!--SEÇÃO CONTENDO FILMES DO ASSISTIR NOVAMENTE(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+<section class="flex flex-col items-center my-12 centered-section">
+    <div id="timer-section">
+        <span id="timeTogether" class="timer text-4xl sm:text-5xl font-bold text-red-600">10 dias</span>
+        <p class="text-xl font-bold sm:text-2xl mt-4">QUE SOU FELIZ AO SEU LADO!</p>
+    </div>
+</section>
+
+
+<section class="px-6 mt-24">
+    <p class="text-xl font-medium mb-4">Minha lista</p>
+    <ul class="flex space-x-4 overflow-x-auto overflow-hidden">
+        <li class="flex-shrink-0 w-72">
+            <a href="filme1.html">
+                <img src="img/RETROSPECTIVA_2024.png" alt="Video" class="w-full h-40 object-cover rounded">
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!--SEÇÃO CONTENDO TODOS OS FILMES(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+<section class="px-6">
+    <p class="text-xl font-medium mb-4 mt-4">Todas as Séries</p>
+    <ul class="flex space-x-4 overflow-x-auto overflow-hidden">
+        <li class="flex-shrink-0 w-72">
+            <a href="filme1.html">
+                <img src="img/RETROSPECTIVA_2024.png" alt="Video" class="w-full h-40 object-cover rounded">
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!--SEÇÃO CONTENDO TODOS OS FILMES(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+    <section class="container">
+
+        <div id="carrosel">
+        <button type="button" id="btnleft"><img src="img/Carrosel-setae.png" alt="seta" class="botao__seta"></button>
+        <button type="button" id="btnright"><img src="img/Carrosel-setad.png" alt="seta" class="botao__seta"></button>
+    </section>
+
+<!--RODAPE DA PAGINA-->
+<footer class="flex justify-center items-center h-16 bg-black-100 text-gray-500 mt-12">
+    <p>Feito por Kauã Tiezzi!</p>
+    
+</footer>
+</body>
+</html>
